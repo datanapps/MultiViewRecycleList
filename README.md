@@ -18,9 +18,9 @@ Just using below dependency and create a sample one.
 
 https://github.com/sockeqwe/AdapterDelegates
 
- private void createAdapter(){
-        baseItemAdapter = new BaseItemAdapter();
-        baseItemAdapter.addDelegate(new UsersAdapter());
+      private void createAdapter(){
+            baseItemAdapter = new BaseItemAdapter();
+            baseItemAdapter.addDelegate(new UsersAdapter());
         baseItemAdapter.addDelegate(new MoviesAdapter());
         baseItemAdapter.addDelegate(new HeaderAdapter());
         baseItemAdapter.addDelegate(new RectHeaderAdapter());
