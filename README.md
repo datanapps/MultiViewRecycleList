@@ -22,11 +22,13 @@ There are many way to implement multiview and multiItem in single recycle view b
     final int USER=0;
     final int RECT_HEADER=1;
  
+      //============================================ initialise //
                       MultiViewAdapter(Context context) {
                           feedItems = new ArrayList<>();
                           inflater = LayoutInflater.from(context);
                       }
 
+      //============================================ Setter Getter//
                 public void setFeedItems(List<BaseModel> feedItems) {
                     this.feedItems = feedItems;
                     notifyDataSetChanged();
@@ -36,7 +38,9 @@ There are many way to implement multiview and multiItem in single recycle view b
                 public int getItemCount() {
                     return feedItems==null?0:feedItems.size();
                 }
-       // Get View type according to view Item//
+                
+                
+       //============================================ Get View type according to view Item//
                 @Override
                 public int getItemViewType(int position) {
 
@@ -51,7 +55,7 @@ There are many way to implement multiview and multiItem in single recycle view b
 
     }
 
-      // Get view holder accorcing to view type ============================================//
+      //============================================ Get view holder accorcing to view type //
           @Override
           public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
               switch (viewType) {
@@ -64,7 +68,7 @@ There are many way to implement multiview and multiItem in single recycle view b
         return new UserViewHolder(inflater.inflate(R.layout.item_layout_user, parent, false));
 
     }
-      // Bind view accorcing to view holder ============================================//
+      //============================================ Bind view accorcing to view holder //
           @Override
           public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
               switch (holder.getItemViewType()) {
@@ -133,7 +137,3 @@ https://github.com/sockeqwe/AdapterDelegates
         baseItemAdapter.addFeedItems(getPreparedItemDate());
     }
 
-//===============================================================//
-# Second way
-
-Create your own adpter with if else or switch with type.
