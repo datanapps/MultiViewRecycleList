@@ -36,7 +36,7 @@ There are many way to implement multiview and multiItem in single recycle view b
                 public int getItemCount() {
                     return feedItems==null?0:feedItems.size();
                 }
-
+       // Get View type according to view Item//
                 @Override
                 public int getItemViewType(int position) {
 
@@ -51,6 +51,7 @@ There are many way to implement multiview and multiItem in single recycle view b
 
     }
 
+      // Get view holder accorcing to view type ============================================//
           @Override
           public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
               switch (viewType) {
@@ -63,7 +64,7 @@ There are many way to implement multiview and multiItem in single recycle view b
         return new UserViewHolder(inflater.inflate(R.layout.item_layout_user, parent, false));
 
     }
-
+      // Bind view accorcing to view holder ============================================//
           @Override
           public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
               switch (holder.getItemViewType()) {
@@ -84,7 +85,9 @@ There are many way to implement multiview and multiItem in single recycle view b
         }
            
     }
-//============================================//
+    
+    // define all view holder here
+      //============================================//
 
     public class UserViewHolder extends RecyclerView.ViewHolder {
         public TextView userName;
