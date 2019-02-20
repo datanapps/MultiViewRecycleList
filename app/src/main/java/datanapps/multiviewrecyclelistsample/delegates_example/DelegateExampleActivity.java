@@ -28,6 +28,9 @@ import datanapps.multiviewrecyclelistsample.models.User;
  * Yogendra
  * 11/02/2019
  *
+ * To make sure you are implemented in build dependency
+ *  implementation "com.hannesdorfmann:adapterdelegates3:3.0.1"
+ *
  * */
 
 // Sample activity that display recycle view
@@ -46,6 +49,10 @@ public class DelegateExampleActivity extends AppCompatActivity {
         setRecycleView();
     }
 
+    /*
+    * create base adapter and save all other adapter as delegate
+    *
+    * */
     private void createAdapter(){
         baseItemAdapter = new BaseItemAdapter();
         baseItemAdapter.addDelegate(new UsersAdapter());
@@ -55,7 +62,10 @@ public class DelegateExampleActivity extends AppCompatActivity {
         baseItemAdapter.addFeedItems(getPreparedItemDate());
     }
 
-
+/*
+*
+* Prepare recycle view to show data
+* */
     private void setRecycleView(){
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
@@ -65,6 +75,11 @@ public class DelegateExampleActivity extends AppCompatActivity {
         recyclerView.setAdapter(baseItemAdapter);
     }
 
+
+    /*
+    *
+    * prepare multi item list  
+    * */
     private  List<BaseModel> getPreparedItemDate() {
 
         List<BaseModel> itemList = new ArrayList<>();
