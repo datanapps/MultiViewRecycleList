@@ -137,11 +137,11 @@ Just Add differtent item adapter in base adapter.
         baseItemAdapter.addFeedItems(getPreparedItemDate());
     }
     
-    //=======================================================//
-    # What is best approach:
-    //=======================================================//
+//=======================================================//
+ # What is best approach:
+//=======================================================//
     
-    If you want to show small item in recycle view with less action then follow first approach and second approach is good for if your view contain lots of action like click, share, like, bookmark etc.
+ If you want to show small item in recycle view with less action then follow first approach and second approach is good for if your view contain lots of action like click, share, like, bookmark etc.
     
     
     
