@@ -1,4 +1,4 @@
-package datanapps.multiviewrecyclelistsample.adapters;
+package datanapps.multiviewrecyclelistsample.delegates_example.adapters;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -13,7 +13,6 @@ import com.hannesdorfmann.adapterdelegates3.AdapterDelegate;
 import java.util.List;
 
 import datanapps.multiviewrecyclelistsample.R;
-import datanapps.multiviewrecyclelistsample.models.BaseModel;
 import datanapps.multiviewrecyclelistsample.models.User;
 
 public class UsersAdapter<T> extends AdapterDelegate<List<T>> {

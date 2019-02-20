@@ -18,7 +18,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/multiviewrecyclelistsample/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/multiviewrecyclelistsample/MultiViewAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/multiviewrecyclelistsample/MultiviewAdapter.java">
           <value>
             <set />
           </value>
@@ -58,6 +73,31 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/multiviewrecyclelistsample/delegates/DelegateExampleActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/multiviewrecyclelistsample/delegates_example/DelegateExampleActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/multiviewrecyclelistsample/delegates_example/adapters/HeaderAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/multiviewrecyclelistsample/delegates_example/adapters/MoviesAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/multiviewrecyclelistsample/delegates_example/adapters/RectHeaderAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/multiviewrecyclelistsample/models/BaseModel.java">
           <value>
             <set />
@@ -84,6 +124,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/multiviewrecyclelistsample/models/User.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/multiviewrecyclelistsample/simple/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/multiviewrecyclelistsample/simple/MultiViewAdapter.java">
           <value>
             <set />
           </value>
