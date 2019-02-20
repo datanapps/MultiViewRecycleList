@@ -17,6 +17,16 @@ import datanapps.multiviewrecyclelistsample.models.Movie;
 import datanapps.multiviewrecyclelistsample.models.RectHeader;
 import datanapps.multiviewrecyclelistsample.models.User;
 
+
+
+/*
+ *
+ * Yogendra
+ * 11/02/2019
+ *
+ * */
+
+// Sample activity that display recycle view
 public class MainActivity extends AppCompatActivity {
 
 
@@ -31,12 +41,19 @@ public class MainActivity extends AppCompatActivity {
         setRecycleView();
     }
 
+    /*
+    *
+    * prepare adapter
+    * */
     private void createAdapter(){
         multiViewAdapter = new MultiViewAdapter(this);
         multiViewAdapter.setFeedItems(getPreparedItemDate());
     }
 
-
+/*
+* prepare recycle view
+*
+* */
     private void setRecycleView(){
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
@@ -46,6 +63,12 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(multiViewAdapter);
     }
 
+
+
+    /*
+    *
+    * Prepare data list to show in recycle view
+    * */
     private  List<BaseModel> getPreparedItemDate() {
 
         List<BaseModel> itemList = new ArrayList<>();

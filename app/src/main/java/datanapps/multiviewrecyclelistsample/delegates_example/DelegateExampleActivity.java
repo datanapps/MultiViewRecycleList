@@ -22,6 +22,16 @@ import datanapps.multiviewrecyclelistsample.models.Movie;
 import datanapps.multiviewrecyclelistsample.models.RectHeader;
 import datanapps.multiviewrecyclelistsample.models.User;
 
+
+/*
+ *
+ * Yogendra
+ * 11/02/2019
+ *
+ * */
+
+// Sample activity that display recycle view
+
 public class DelegateExampleActivity extends AppCompatActivity {
 
 
@@ -42,9 +52,6 @@ public class DelegateExampleActivity extends AppCompatActivity {
         baseItemAdapter.addDelegate(new MoviesAdapter());
         baseItemAdapter.addDelegate(new HeaderAdapter());
         baseItemAdapter.addDelegate(new RectHeaderAdapter());
-
-
-
         baseItemAdapter.addFeedItems(getPreparedItemDate());
     }
 

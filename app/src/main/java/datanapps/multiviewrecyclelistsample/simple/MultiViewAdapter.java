@@ -11,7 +11,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import datanapps.multiviewrecyclelistsample.R;
 import datanapps.multiviewrecyclelistsample.models.BaseModel;
 import datanapps.multiviewrecyclelistsample.models.Header;
@@ -20,37 +19,41 @@ import datanapps.multiviewrecyclelistsample.models.RectHeader;
 import datanapps.multiviewrecyclelistsample.models.User;
 
 /*
-*
-* this is single adapter that contain multiple view
-*
-* */
+ *
+ * Yogendra
+ * 11/02/2019
+ *
+ *
+ * This is single adapter that contain multiple view
+ *
+ * All different model can handle by one adapter
+ *
+ * */
 public class MultiViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
 
     private List<BaseModel> feedItems;
     private LayoutInflater inflater;
 
+    /*
+     * define a constant for identify better
+     * */
+    final int USER = 0;
+    final int RECT_HEADER = 1;
+    final int MOVIE = 2;
+    final int HEADER = 3;
 
     /*
-    * define a constant for identify better
-    * */
-    final int USER=0;
-    final int RECT_HEADER=1;
-    final int MOVIE=2;
-    final int HEADER=3;
-
-
-
-
-/*
-*  
-* */
+     *
+     * */
     MultiViewAdapter(Context context) {
         feedItems = new ArrayList<>();
         inflater = LayoutInflater.from(context);
 
     }
 
+    /*
+     * getter for feed item list
+     * */
     public void setFeedItems(List<BaseModel> feedItems) {
         this.feedItems = feedItems;
         notifyDataSetChanged();
@@ -58,7 +61,7 @@ public class MultiViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     @Override
     public int getItemCount() {
-        return feedItems==null?0:feedItems.size();
+        return feedItems == null ? 0 : feedItems.size();
     }
 
     @Override
@@ -67,21 +70,13 @@ public class MultiViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         BaseModel baseModel = feedItems.get(position);
         if (baseModel instanceof User) {
             return USER;
-        }
-        else if (baseModel instanceof RectHeader) {
+        } else if (baseModel instanceof RectHeader) {
             return RECT_HEADER;
-        }
-
-        else if (baseModel instanceof Movie) {
+        } else if (baseModel instanceof Movie) {
             return MOVIE;
-        }
-
-        else if (baseModel instanceof Header) {
+        } else if (baseModel instanceof Header) {
             return HEADER;
         }
-
-
-
         return 0;
 
     }
@@ -135,13 +130,16 @@ public class MultiViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             case HEADER:
                 final Header header = (Header) feedItems.get(position);
                 final HeaderHolder headerViewHolder = (HeaderHolder) holder;
-                headerViewHolder.tvHeader.setText(header.getHeaderName()+""+(position+1));
+                headerViewHolder.tvHeader.setText(header.getHeaderName() + "" + (position + 1));
 
                 break;
         }
     }
 
-
+    /*
+     * All view holder defined here
+     *
+     * */
 //============================================//
 
     public class UserViewHolder extends RecyclerView.ViewHolder {
@@ -179,8 +177,8 @@ public class MultiViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         public MovieViewHolder(View view) {
             super(view);
             title = view.findViewById(R.id.title);
-            genre =  view.findViewById(R.id.genre);
-            year =  view.findViewById(R.id.year);
+            genre = view.findViewById(R.id.genre);
+            year = view.findViewById(R.id.year);
         }
     }
 
