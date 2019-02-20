@@ -78,7 +78,7 @@ public class DelegateExampleActivity extends AppCompatActivity {
 
     /*
     *
-    * prepare multi item list  
+    * prepare multi item list
     * */
     private  List<BaseModel> getPreparedItemDate() {
 
