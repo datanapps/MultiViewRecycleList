@@ -23,26 +23,25 @@ There are many way to implement multiview and multiItem in single recycle view b
     final int RECT_HEADER=1;
  
       //============================================ initialise //
-                      MultiViewAdapter(Context context) {
+          MultiViewAdapter(Context context) {
                           feedItems = new ArrayList<>();
                           inflater = LayoutInflater.from(context);
                       }
 
       //============================================ Setter Getter//
-                public void setFeedItems(List<BaseModel> feedItems) {
-                    this.feedItems = feedItems;
+         public void setFeedItems(List<BaseModel> feedItems) {
+               this.feedItems = feedItems;
                     notifyDataSetChanged();
-                }
+           }
 
-                @Override
-                public int getItemCount() {
-                    return feedItems==null?0:feedItems.size();
-                }
-                
+          @Override
+           public int getItemCount() {
+               return feedItems==null?0:feedItems.size();
+          }
                 
        //============================================ Get View type according to view Item//
-                @Override
-                public int getItemViewType(int position) {
+        @Override
+        public int getItemViewType(int position) {
 
         BaseModel baseModel = feedItems.get(position);
         if (baseModel instanceof User) {
@@ -79,12 +78,12 @@ There are many way to implement multiview and multiItem in single recycle view b
                       userViewHolder.userName.setText(user.getName());
                       break;
 
-            case RECT_HEADER:
-                final RectHeader rectHeader = (RectHeader) feedItems.get(position);
-                final RectHeaderHolder rectHeaderHolder = (RectHeaderHolder) holder;
-                rectHeaderHolder.tvRectHeader.setText(rectHeader.getRectHeaderName());
-                rectHeaderHolder.bgView.setBackgroundColor(rectHeader.getRectHeaderBgColorCode());
-                break;
+                  case RECT_HEADER:
+                      final RectHeader rectHeader = (RectHeader) feedItems.get(position);
+                      final RectHeaderHolder rectHeaderHolder = (RectHeaderHolder) holder;
+                      rectHeaderHolder.tvRectHeader.setText(rectHeader.getRectHeaderName());
+                      rectHeaderHolder.bgView.setBackgroundColor(rectHeader.getRectHeaderBgColorCode());
+                      break;
 
         }
            
@@ -123,17 +122,28 @@ There are many way to implement multiview and multiItem in single recycle view b
 # Second way :  Add all type of adapter in base adapter it will handle automatically.
 //===============================================================//
 A sample application can get from delegate package
-Just using below dependency and create a sample one.
 
+Using third party   https://github.com/sockeqwe/AdapterDelegates created a example. This is very useful and easy to understand
 
-https://github.com/sockeqwe/AdapterDelegates
+Just Add differtent item adapter in base adapter. 
 
       private void createAdapter(){
-            baseItemAdapter = new BaseItemAdapter();
-            baseItemAdapter.addDelegate(new UsersAdapter());
+        baseItemAdapter = new BaseItemAdapter();
+            
+        baseItemAdapter.addDelegate(new UsersAdapter());
         baseItemAdapter.addDelegate(new MoviesAdapter());
         baseItemAdapter.addDelegate(new HeaderAdapter());
         baseItemAdapter.addDelegate(new RectHeaderAdapter());
         baseItemAdapter.addFeedItems(getPreparedItemDate());
     }
+    
+    //=======================================================//
+    # What is best approach:
+    //=======================================================//
+    
+    If you want to show small item in recycle view with less action then follow first approach and second approach is good for if your view contain lots of action like click, share, like, bookmark etc.
+    
+    
+    
+    
 
