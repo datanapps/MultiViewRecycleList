@@ -3,16 +3,13 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-
-
-
     <color name="colorPink">#F7B8F0</color>
     <color name="colorOrange">#F3E978</color>
     <color name="colorWhite">#FFFFFF</color>
-
+    <color name="colorGrey">#A6A6A6</color>
+    <color name="colorBlack">#000000</color>
     <color name="colorYellow">#F6E52A</color>
-
     <color name="colorPurple">#BA1FF3</color>
-
+    <color name="colorPurpleTransparent">#A6BA1FF3</color>
 
 </resources>

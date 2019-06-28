@@ -1,12 +1,15 @@
 package datanapps.multiviewrecyclelistsample.simple;
 
 import android.content.Context;
+import android.media.Image;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -113,7 +116,7 @@ public class MultiViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 final RectHeader rectHeader = (RectHeader) feedItems.get(position);
                 final RectHeaderHolder rectHeaderHolder = (RectHeaderHolder) holder;
                 rectHeaderHolder.tvRectHeader.setText(rectHeader.getRectHeaderName());
-                rectHeaderHolder.bgView.setBackgroundColor(rectHeader.getRectHeaderBgColorCode());
+                Picasso.get().load(rectHeader.getRectHeaderImageUrl()).into(rectHeaderHolder.imgHeader);
 
                 break;
 
@@ -130,7 +133,7 @@ public class MultiViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             case HEADER:
                 final Header header = (Header) feedItems.get(position);
                 final HeaderHolder headerViewHolder = (HeaderHolder) holder;
-                headerViewHolder.tvHeader.setText(header.getHeaderName() + "" + (position + 1));
+               // headerViewHolder.tvHeader.setText(header.getHeaderName() + "" + (position + 1));
 
                 break;
         }
@@ -159,12 +162,14 @@ public class MultiViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     public class RectHeaderHolder extends RecyclerView.ViewHolder {
         public TextView tvRectHeader;
+        public ImageView imgHeader;
         public View bgView;
 
         public RectHeaderHolder(View view) {
             super(view);
             bgView = view;
             tvRectHeader = view.findViewById(R.id.tv_rect_header);
+            imgHeader =  view.findViewById(R.id.tv_rect_header_image);
 
         }
     }

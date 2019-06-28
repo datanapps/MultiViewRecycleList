@@ -5,7 +5,7 @@
     android:clickable="true"
     android:focusable="true"
     android:padding="10dp"
-    android:background="@color/colorOrange"
+    android:background="@color/colorPurpleTransparent"
     android:orientation="vertical"
     >
 
@@ -25,12 +25,10 @@
         android:layout_marginStart="10dp"
         android:text="@string/app_name"
         android:textSize="22sp"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorBlack"
         android:layout_toEndOf="@+id/img_image_name"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_below="@id/title" />
-
-
 
 </RelativeLayout>

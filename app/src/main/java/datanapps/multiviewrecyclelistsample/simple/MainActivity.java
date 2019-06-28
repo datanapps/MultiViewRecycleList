@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         List<BaseModel> itemList = new ArrayList<>();
         itemList.add(new Movie("Mad Max: Fury Road", "Action & Adventure", "2015"));
         itemList.add(new User(R.mipmap.ic_launcher, "Vinay"));
-        itemList.add(new RectHeader(Color.RED, " Red Text"));
+        itemList.add(new RectHeader("http://hippy.in/wp-content/uploads/old-bollywood-movie-posters-for-sale-mughal-e-azam.jpg", " Mughal-E-Azam"));
         itemList.add(new Header("Header "));
         itemList.add(new User(R.drawable.ic_avatar_male_1, "Yogendra"));
         itemList.add(new Movie("Apane", "Family", "2009"));
@@ -84,12 +84,14 @@ public class MainActivity extends AppCompatActivity {
         itemList.add(new User(R.drawable.ic_avatar_male_1, "Pawan"));
         itemList.add(new Header("Header "));
         itemList.add(new Movie("BOSS", "Actios", "2012"));
-        itemList.add(new RectHeader(Color.BLUE, " Blue Text"));
+        itemList.add(new RectHeader("https://cdn.shopify.com/s/files/1/0747/3829/products/mNS0678_1024x1024.jpg?v=1502489793", " Barfi"));
         itemList.add(new Movie("YES", "Romanse", "2005"));
         itemList.add(new Movie("Baby", "Actios", "2014"));
-        itemList.add(new RectHeader(Color.YELLOW, " Yellow Text"));
+        itemList.add(new RectHeader("https://cdn.shopify.com/s/files/1/0747/3829/products/mNS0681_1024x1024.jpg?v=1502406836", " BHaag Milkha Bhaag"));
         itemList.add(new Header("Header "));
+        itemList.add(new RectHeader("https://static-koimoi.akamaized.net/wp-content/new-galleries/2015/11/ghayal-once-again-movie-poster-3.jpg", " Ghayal-Once-Again"));
         itemList.add(new Header("Header "));
+        itemList.add(new User(R.drawable.ic_avatar_female, "Kiran"));
        itemList.add(new Header("Header "));
         return itemList;
     }

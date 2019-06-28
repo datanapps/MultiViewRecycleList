@@ -3,24 +3,16 @@ package datanapps.multiviewrecyclelistsample.models;
 public class RectHeader implements BaseModel {
 
     private String rectHeaderName;
+    private String rectHeaderImageUrl;
 
-    private int rectHeaderBgColorCode;
 
     public RectHeader() {
         // nothing to do here
     }
 
-    public RectHeader(int bgColorCode, String headerName) {
-        this.rectHeaderBgColorCode = bgColorCode;
+    public RectHeader(String headerImage, String headerName ) {
+        this.rectHeaderImageUrl = headerImage;
         this.rectHeaderName = headerName;
-    }
-
-    public int getRectHeaderBgColorCode() {
-        return rectHeaderBgColorCode;
-    }
-
-    public void setRectHeaderBgColorCode(int rectHeaderBgColorCode) {
-        this.rectHeaderBgColorCode = rectHeaderBgColorCode;
     }
 
     public String getRectHeaderName() {
@@ -29,5 +21,13 @@ public class RectHeader implements BaseModel {
 
     public void setRectHeaderName(String rectHeaderName) {
         this.rectHeaderName = rectHeaderName;
+    }
+
+    public String getRectHeaderImageUrl() {
+        return rectHeaderImageUrl;
+    }
+
+    public void setRectHeaderImageUrl(String rectHeaderImageUrl) {
+        this.rectHeaderImageUrl = rectHeaderImageUrl;
     }
 }
